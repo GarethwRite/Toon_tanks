@@ -21,6 +21,22 @@ UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (A
 USpringArmComponent* SpringArm;
 
 
+FVector MoveDirection;
+
+FQuat RotationDirection;
+
+UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement", meta = (AllowPrivateAccess = true))
+float MoveSpeed = 100.0f;
+UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement", meta = (AllowPrivateAccess = true))
+float RotateSpeed = 100.0f;
+
+void CalculateMoveInput(float Value);
+void CalculateRotateInput(float Value);
+
+void Move();
+void Rotate();
+
+
 public:
 
 	APawnTank();
