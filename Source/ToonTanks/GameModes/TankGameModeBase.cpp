@@ -29,6 +29,7 @@ void ATankGameModeBase::ActorDied(AActor* DeadActor)
         if(--TargetTurret == 0)
         {
             HandleGameOver(true);
+            UE_LOG(LogTemp, Warning,TEXT("handel game over"));
         }
     }
 
